@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caxote{
+            background-color: rgb(243, 0, 0);
+            height: 300px;
+            width: 800px;
+            position: relative;
+            padding: 10px;
+            margin: 10px 10px;
+
+        }
+        .item{
+            background-color: brown;
+            width: 100px;
+            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            
+
+        }
+        .camp{
+            background-color: rgba(255, 255, 255, 0.349);
+        }
+    </style>
+</head>
+<body>
+    <div id="fundo"></div>
+    <div class="caxote">
+    <form action="#" method="post" id="meu-form">
+    <input type="text" name="casa" class="camp">
+    <button id="mybotao" type="submit">Clona</button>
+    <div id="coiso"></div></form>
+    </div>
+    <script>
+        let caixa = document.querySelector(".caxote")
+        let botao = document.querySelector("#mybotao")
+        let inputtext = document.querySelector(".camp")
+
+        botao.addEventListener("click", function(enviar){
+            // if (caixa.textContent=="Clona Cartão")caixa.textContent=""
+            // else caixa.textContent ="Clona Cartão"
+            enviar.preventDefault()
+            let minhadiv = document.createElement("div")
+            minhadiv.textContent = inputtext.value
+            minhadiv.classList.add("item")
+            
+            caixa.appendChild(minhadiv)
+            
+        })
+        console.log(caixa)
+    </script>
+</body>
+</html>
