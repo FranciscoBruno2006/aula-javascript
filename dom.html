@@ -11,7 +11,7 @@
             width: 800px;
             position: relative;
             padding: 10px;
-            margin: 10px 10px;
+            margin: 10px 10px;  
 
         }
         .item{
@@ -36,7 +36,7 @@
     <button id="mybotao" type="submit">Clona</button>
     <div id="coiso"></div></form>
     </div>
-    <script>
+    <!-- <script>
         let caixa = document.querySelector(".caxote")
         let botao = document.querySelector("#mybotao")
         let inputtext = document.querySelector(".camp")
@@ -53,6 +53,76 @@
             
         })
         console.log(caixa)
+    </script> -->
+    <script>
+        let anotacao={
+            titulo: "Minha anotação",
+            descricao: "Descrição da anotação ne",
+            data: "07/09/2026",
+
+        }
+        console.log(anotacao)
+        // alert(anotacao['data'])
+        // alert(anotacao.data)
+        let livro_de_anotacao=[
+            {
+            titulo: "Aula de amanhã",
+            descricao: "Reclamar que o Breno Burro passou perfume na sala",
+            data: "07/09/2026",
+            preco: 50
+
+        },
+        {
+            titulo: "Hoje é SEXTA FEIRAAA",
+            descricao: "pegar carona com o enzo",
+            data: "09/10/2026",
+            preco: 70
+        },
+        {
+            titulo: "ontem foi?",
+            descricao: "pegar carona com o enzo",
+            data: "09/10/2026",
+            preco: 80
+        },
+        {
+            titulo: "Ontem foi sim",
+            descricao: "pegar carona com o enzo",
+            data: "09/10/2026",
+            preco: 100
+        },
+        {
+            titulo: "Hoje não é sexta feira",
+            descricao: "pegar carona com o enzo",
+            data: "09/10/2026",
+            preco: 30
+        }
+        ]
+        console.log(livro_de_anotacao[1].descricao);
+        livro_de_anotacao[0].titulo="TItulo novo mudado diferente"
+        let nova_anotacao={
+            titulo: "Aula de terça",
+            descricao: "Descriçao da aula de terça pai",
+            data: "quando esfriar",
+        }
+        livro_de_anotacao.push(nova_anotacao)
+        console.log(livro_de_anotacao)
+        // livro_de_anotacao.pop()
+        let minha_funcao=function imprimirTitulo(objeto){
+            console.log(objeto.titulo)
+        }
+        livro_de_anotacao.forEach(minha_funcao)
+        let outrafuncao = function maiscaro(objeto){
+            return objeto.preco>=50
+        }
+        console.log(livro_de_anotacao.filter(outrafuncao));
+
+        let mais_outra_funcao = function pagarmeia(objeto){
+            return objeto.preco /2
+        }
+
+        console.log(livro_de_anotacao.map(mais_outra_funcao))
+        
+
     </script>
 </body>
 </html>
