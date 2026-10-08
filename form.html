@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="formu">
+        <input type="text" id="nome">
+        <input type="number" id="idade">
+        <input type="text" id="curso">
+        <input type="text" id="turno">
+        <input type="submit" id="salvar">
+    </div>
+    <script>
+        let textonome= document.querySelector('#nome')
+        let valoridade= document.querySelector('#idade')
+        let textocurso= document.querySelector('#curso')
+        let textoturno= document.querySelector('#turno')
+        let botaoenviar= document.querySelector('#salvar')
+        let envios=[]
+
+        botaoenviar.addEventListener("click", aoclicarvaienviar => {
+            aoclicarvaienviar.preventDefault();
+            let novo_envio={
+                nome: textonome.value,
+                idade: Number(valoridade.value),
+                curso: textocurso.value,
+                turno: textoturno.value,
+
+            }
+            envios.push(novo_envio)
+            console.log(envios);
+            
+        })
+    </script>
+</body>
+</html>

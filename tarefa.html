@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .marroia {
+            border-radius: 28px;
+            height: 30px;
+            border-color: grey;
+            border-width: 1px;
+            text-align: center;
+
+        }
+
+        .divs {
+            margin: 5px 5px;
+        }
+
+        #enviar {
+            background-color: rgb(99, 198, 255);
+            border-radius: 18px;
+            box-shadow: 18px, 20px black;
+        }
+
+        #fundo {
+            height: 1000px;
+            width: 1000px;
+
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPEv6ZVvTdtxtYWdJU7IvtcRtYrW3jOExEfAYt7ELezg&s=10')
+        }
+    </style>
+    <div id="fundo">
+        <form onsubmit="event.preventDefault();
+        pessoas.push({
+        nome: nome.value,
+        idade: idade.value,
+        curso: curso.value,
+        turno: turno.value});
+        console.log(pessoas)">
+            <div class="divs">
+                <input class="marroia" type="text" name="nome" id="nome" placeholder="Nome">
+            </div>
+            <div class="divs">
+                <input class="marroia" type="number" name="idade" id="idade" placeholder="Idade">
+            </div>
+            <div class="divs">
+                <input class="marroia" type="text" name="curso" id="curso" placeholder="Curso">
+            </div>
+            <div class="divs">
+                <input class="marroia" type="text" name="turno" id="turno" placeholder="Turno">
+            </div>
+            
+                <button type="submit" id="enviar">Enviar</button>
+            
+
+        </form>
+    </div>
+
+
+    <script>
+        let pessoas = []
+    </script>
+
+</body>
+
+</html>
